@@ -1,0 +1,29 @@
+{
+  "roles": [
+    {
+      "nombre": "Adminedcdec",
+      "descripcion": "Acceso total",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Usuario",
+      "descripcion": "Acceso limitado"
+    },
+    {
+      "nombre": "dede",
+      "descripcion": "dede",
+      "id": 3
+    },
+    {
+      "nombre": "edwed",
+      "descripcion": "ede",
+      "id": 4
+    },
+    {
+      "nombre": "dc",
+      "descripcion": "hbnjhbgvfcdx",
+      "id": 5
+    }
+  ]
+}
