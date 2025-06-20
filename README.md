@@ -1,14 +1,14 @@
 
 # ExamenU1
 
-## 📖 Descripción
+## Descripción
 
 Este proyecto corresponde al **Examen Unidad 1** para la asignatura de Lenguajes de Programación.  
 Incluye un sistema **CRUD de Roles** desarrollado en React, con una API REST simulada usando JSON Server.
 
 ---
 
-## 🚀 Instalación y ejecución
+##  Instalación y ejecución
 
 ### 1. Clona el repositorio
 
@@ -50,7 +50,7 @@ npm start
 
 ---
 
-## 📝 Funcionalidades principales
+## Funcionalidades principales
 
 * Listado de roles en tabla
 * Crear, editar y eliminar roles
@@ -60,7 +60,7 @@ npm start
 
 ---
 
-## 📁 Estructura principal
+##  Estructura principal
 
 ```
 ├── src/
@@ -73,23 +73,4 @@ npm start
 ├── db.json
 ├── README.md
 ```
-
----
-
-## ✍️ Notas
-
-* Los commits se han realizado de forma descriptiva y progresiva.
-* No se realizarán más commits luego de la hora de entrega, cumpliendo con las reglas de la evaluación.
-* El historial de cambios puede consultarse en la pestaña "Commits" de este repositorio.
-
----
-
-## 👤 Autor
-
-* **Nombre:** Jared Coto
-* **Correo:** [jaredcoto0418@gmail.com](mailto:jaredcoto0418@gmail.com)
-* **GitHub:** [JaredCoto0418](https://github.com/JaredCoto0418)
-
----
-
 
