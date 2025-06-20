@@ -16,16 +16,30 @@ export default function CreateRolePage() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4">
-      <h2 className="text-lg font-bold mb-2">Crear Rol</h2>
-      <input required value={nombre} onChange={e => setNombre(e.target.value)}
-        className="border rounded px-2 py-1 w-full mb-2" placeholder="Nombre" />
-      <input required value={descripcion} onChange={e => setDescripcion(e.target.value)}
-        className="border rounded px-2 py-1 w-full mb-2" placeholder="Descripción" />
-      <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded">
+    <form onSubmit={handleSubmit} className="form-crear-rol">
+      <h2 className="crear-rol-title">Crear Rol</h2>
+      <input
+        required
+        value={nombre}
+        onChange={e => setNombre(e.target.value)}
+        className="crear-rol-input"
+        placeholder="Nombre"
+      />
+      <input
+        required
+        value={descripcion}
+        onChange={e => setDescripcion(e.target.value)}
+        className="crear-rol-input"
+        placeholder="Descripción"
+      />
+      <button type="submit" className="crear-rol-boton">
         {mutation.isLoading ? "Creando..." : "Crear"}
       </button>
-      {mutation.isError && <div className="text-red-600 mt-2">{mutation.error.message}</div>}
+      {mutation.isError && (
+        <div className="crear-rol-error">
+          {mutation.error.message}
+        </div>
+      )}
     </form>
   );
 }

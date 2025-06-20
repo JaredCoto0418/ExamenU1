@@ -1,65 +1,298 @@
-/* src/App.css */
+body {
+  background: #fafbff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-.roles-container {
-  max-width: 800px;
-  margin: 40px auto;
+nav {
+  padding: 24px 32px 8px 32px;
   background: #fff;
-  padding: 32px 24px;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border-bottom: 1px solid #e6e6e6;
+}
+
+h1, h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+a {
+  color: #563d7c;
+  text-decoration: underline;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: #23527c;
+}
+
+form {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #d3e0f0a8;
+  padding: 28px 32px;
+  margin: 28px auto;
+  max-width: 400px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 48%;
+  padding: 10px;
+  margin-right: 8px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+  border: 1.5px solid #497de9;
+  outline: none;
+}
+
+button {
+  padding: 10px 22px;
+  background: #497de9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:disabled {
+  background: #c0c9e8;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #315ac8;
 }
 
 .roles-table {
-  width: 100%;
+  width: 98%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin: 24px auto;
+  background: #fff;
+  box-shadow: 0 1px 4px #e3eaf2aa;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .roles-table th, .roles-table td {
-  border-bottom: 1px solid #eaeaea;
-  padding: 10px 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #edf2f7;
   text-align: left;
+  font-size: 15px;
 }
 
 .roles-table th {
-  background: #f6f7fb;
-  font-weight: 700;
-  color: #333;
+  background: #f5f8fc;
+  font-size: 16px;
+  color: #497de9;
 }
 
-.roles-table tr:hover {
-  background: #f5f8ff;
+.roles-table tr:last-child td {
+  border-bottom: none;
 }
 
 .action-link {
-  color: #1976d2;
+  margin-right: 8px;
+  color: #497de9;
   text-decoration: none;
-  margin-right: 10px;
-  font-weight: 500;
-  transition: color 0.2s;
 }
+
 .action-link:hover {
-  color: #0d47a1;
+  color: #2d4373;
   text-decoration: underline;
 }
 
-.button-nav {
-  background: #1976d2;
+.roles-container {
+  padding: 32px 30px 0 30px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+.roles-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.roles-search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.buscador-input {
+  width: 320px;
+  padding: 9px 12px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: border 0.2s;
+}
+.buscador-input:focus {
+  border: 1.5px solid #497de9;
+  outline: none;
+}
+.boton-nuevo-rol {
+  background: #497de9;
+  color: #fff !important;
+  padding: 9px 22px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.18s;
+}
+.boton-nuevo-rol:hover {
+  background: #315ac8;
+}
+
+.form-crear-rol {
+  max-width: 400px;
+  margin: 36px auto 0 auto;
+  background: #fafbff;
+  border-radius: 8px;
+  box-shadow: 0 2px 9px rgba(0,0,0,0.05);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.crear-rol-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.crear-rol-input {
+  border: 1px solid #d5d9e3;
+  border-radius: 4px;
+  padding: 10px 13px;
+  font-size: 15px;
+  margin-bottom: 0;
+  outline: none;
+  transition: border 0.18s;
+}
+.crear-rol-input:focus {
+  border: 1.4px solid #497de9;
+}
+.crear-rol-boton {
+  background: #21a870;
   color: #fff;
   border: none;
-  padding: 9px 18px;
-  border-radius: 6px;
-  font-weight: bold;
+  padding: 11px 0;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
-  margin-left: 12px;
+  margin-top: 10px;
+  transition: background 0.18s;
 }
-.button-nav:hover {
-  background: #115293;
+.crear-rol-boton:hover {
+  background: #18885c;
 }
-.input-search {
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-right: 16px;
+.crear-rol-error {
+  color: #c03434;
+  font-size: 0.97rem;
+  margin-top: 6px;
+}
+
+.ver-rol-contenedor {
+  max-width: 420px;
+  margin: 48px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #d2e1fa33;
+  padding: 32px 24px 28px 24px;
+}
+.ver-rol-titulo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #497de9;
+}
+.ver-rol-detalle {
+  font-size: 1.12rem;
+  margin-bottom: 22px;
+}
+.ver-rol-label {
+  font-weight: 500;
+  color: #222;
+  display: inline-block;
+  min-width: 95px;
+}
+.ver-rol-volver {
+  color: #497de9;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.15s;
+}
+.ver-rol-volver:hover {
+  color: #315ac8;
+  text-decoration: underline;
+}
+.ver-rol-cargando, .ver-rol-error {
+  text-align: center;
+  margin-top: 40px;
+  color: #c03434;
+  font-weight: 500;
+}
+
+.form-editar-rol {
+  max-width: 400px;
+  margin: 36px auto 0 auto;
+  background: #fafbff;
+  border-radius: 8px;
+  box-shadow: 0 2px 9px rgba(0,0,0,0.05);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.editar-rol-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.editar-rol-input {
+  border: 1px solid #f0cd79;
+  border-radius: 4px;
+  padding: 10px 13px;
+  font-size: 15px;
+  margin-bottom: 0;
+  outline: none;
+  transition: border 0.18s;
+  background: #fff9ed;
+}
+.editar-rol-input:focus {
+  border: 1.4px solid #c49413;
+}
+.editar-rol-boton {
+  background: #e6a700;
+  color: #fff;
+  border: none;
+  padding: 11px 0;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.18s;
+}
+.editar-rol-boton:hover {
+  background: #d48900;
+}
+.editar-rol-error {
+  color: #c03434;
+  font-size: 0.97rem;
+  margin-top: 6px;
+}
+.editar-rol-cargando {
+  color: #e6a700;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 500;
 }
